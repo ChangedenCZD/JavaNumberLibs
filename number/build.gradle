@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+apply plugin: 'com.novoda.bintray-release'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+publish { // 新增
+    userOrg = 'changedenczd' // 注册bintray时的username
+    groupId = 'com.chansos.libs' // 项目包名
+    artifactId = 'java-number' // 项目名
+    publishVersion = '0.0.6' // 发布版本号
+    desc = 'Java Number Libs.' // 项目描述
+    website = 'https://github.com/ChangedenCZD/JavaLibs' // 项目站点
+}
